@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" dir="{% render 'language-direction' %}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    {%- render 'favicon' -%}
+
+    <title>{{ shop.name }}</title>
+
+    <meta name="description" content="">
+
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+
+    {%- render 'font-preload-link', font: settings.heading_font -%}
+    {%- render 'font-preload-link', font: settings.body_font -%}
+
+    {%- render 'import-map' -%}
+    {%- render 'es-module-shims' -%}
+    {%- render 'is-land' -%}
+
+    {%- render 'font-faces' -%}
+    {%- render 'css-variables' -%}
+
+    <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+
+    {{ content_for_header }}
+
+    <link type="text/css" href="{{ 'reference-components.css' | asset_url }}" rel="stylesheet">
+    <link type="text/css" href="{{ 'theme.css' | asset_url }}" rel="stylesheet">
+  </head>
+
+  <body>
+    {%- sections 'header-group' -%}
+    {{ content_for_layout }}
+  </body>
+</html>
