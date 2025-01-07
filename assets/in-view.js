@@ -1,3 +1,4 @@
+/* reference-components v1.0.0 | Copyright © 2025 Archetype Themes LP  | "MIT" License */
 /**
  * Original source from https://www.npmjs.com/package/@motionone/dom
  * Usage: https://motion.dev/dom/in-view
